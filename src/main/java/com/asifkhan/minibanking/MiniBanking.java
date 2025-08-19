@@ -7,53 +7,11 @@ import java.util.Scanner;
  *
  * @author Asif Khan <asif.cse12@gmail.com>
  */
+
 public class MiniBanking {
 
     public static void main(String[] args) {
-        BankManagement bm = new BankManagement();
-        Scanner input = new Scanner(System.in);
-        
-            System.out.println("Welcome to Mini Bank");
-            System.out.println("To create Bank account please enter 1");
-            System.out.println("To login your account please enter 2");
-            System.out.println("Exit from application type 0");
-        switch(input.nextInt()){
-            
-            case 1:
-                String customerName="";
-                String customerPassCode="";
-                
-                System.out.println("Please enter your user name");
-                Scanner sc = new Scanner(System.in);
-                customerName = sc.nextLine();
-                System.out.println("Choose password");
-                customerPassCode = sc.nextLine();
-                if(bm.createAccount(customerName,customerPassCode)){
-                    System.out.println("Account created Successfully");
-                }else{
-                    System.out.println("All Field Required!");
-                }
-                
-            case 2:
-                Scanner sc1 = new Scanner(System.in);
-                System.out.println("Enter customer user name");
-                customerName = sc1.nextLine();
-                System.out.println("Enter user password");
-                customerPassCode = sc1.nextLine();
-                if(bm.isValidUser(customerName,customerPassCode)){
-                    System.out.println("loged in Successfully");
-                    System.out.println("Account blance: "+bm.checkBlance(customerName, customerPassCode));
-                    System.out.println("Transfer blance");
-          
-                }else{
-                    System.out.println("All Field Required!");
-                }
-            default:
-               
-        }
-       
-*/
-        
+
         String customerName = "";
         String customerPassCode;
         int custoemrAccountNo;
